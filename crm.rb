@@ -15,5 +15,5 @@ get '/contacts' do
 end
 
 get '/contacts/new' do
-	erb :contacts
+	erb :new_contact
 end
