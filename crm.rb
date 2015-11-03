@@ -17,3 +17,7 @@ end
 get '/contacts/new' do
 	erb :new_contact
 end
+
+post '/contacts' do
+	Contact.create(params[:first_name], params[:last_name], params[:email], params[:notes])
+end
