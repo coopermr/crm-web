@@ -7,6 +7,8 @@ get '/' do
 end
 
 get '/contacts' do
+	#Temporary fake user id = 1000
+	Contact.create("Johnny", "Bravo", "johnny@bitmakerlabs.com", "Rockstar")
 	Contact.create("Yehuda", "Katz", "yehuda@example.com", "Developer")
 	Contact.create("Mark", "Zuckerberg", "mark@facebook.com", "CEO")
 	Contact.create("Sergey", "Brin", "sergey@google.com", "Co-Founder")
@@ -19,6 +21,11 @@ end
 
 get '/contacts/new' do
 	erb :new_contact
+end
+
+get	"/contacts/1000" do
+	@contact = Contact.find(1000)
+	erb :show_contact
 end
 
 post '/contacts' do
