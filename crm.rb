@@ -12,6 +12,9 @@ get '/contacts' do
 	Contact.create("Sergey", "Brin", "sergey@google.com", "Co-Founder")
 
 	erb :contacts
+
+	#redirect to ('/')
+
 end
 
 get '/contacts/new' do
@@ -20,7 +23,7 @@ end
 
 post '/contacts' do
 	Contact.create(params[:first_name], params[:last_name], params[:email], params[:notes])
-	redirect to('/contacts')
+	redirect to ('/contacts')
 end
 
 get '/contacts' do

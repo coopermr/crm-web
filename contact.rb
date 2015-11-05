@@ -28,4 +28,7 @@ class Contact
 		"#{first_name} #{last_name}"
 	end
 
+	def self.find(contact_id)
+		@@contacts.find { |contact| contact.id == contact.id }
+	end
 end
