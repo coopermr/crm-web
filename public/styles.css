@@ -1,0 +1,23 @@
+body {
+    	background: aliceblue;
+    	display: table;
+    	width: 100%;
+			}
+
+a {
+	font-family: "Arial";
+	color: orange;
+}
+
+h1 {
+	font-family: "Arial";
+	color: purple;
+}
+
+p	{
+	font-size: 20px;
+	font-family: "Arial";
+	color: purple;
+}
+
+
