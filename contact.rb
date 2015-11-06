@@ -10,12 +10,12 @@ class Contact
 		@last_name = last_name
 		@email = email
 		@notes = notes
-		@id = @@id
+		#@id = @@id
 		@@id += 1
 	end
 
 	def self.create(first_name, last_name, email, notes = nil)
-		new_contact = new(first_name, last_name, email, notes = nil)
+		new_contact = Contact.new(first_name, last_name, email, notes = nil)
 		#new_contact.id = @@id
 		@@contacts << new_contact
 	end

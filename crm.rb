@@ -23,8 +23,8 @@ get '/contacts/new' do
 	erb :new_contact
 end
 
-get	"/contacts/1000" do
-	@contact = Contact.find(1000)
+get	"/contacts/:id" do
+	@contact = Contact.find(params[:id].to_i)
 	erb :show_contact
 end
 
